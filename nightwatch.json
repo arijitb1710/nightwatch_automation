@@ -19,7 +19,7 @@
     },
   
     "test_settings" : {
-      "default" : {
+      "docker" : {
         "launch_url" : "http://www.google.com",
         "selenium_port"  : 4446,
         "selenium_host"  : "192.168.99.100",
@@ -31,13 +31,41 @@
           "on-error" : true
         },
         "desiredCapabilities": {
+          "browserName": "firefox"
+        },
+
+      "default" : {
+        "launch_url" : "http://www.google.com",
+        "selenium_port"  : 4444,
+        "selenium_host"  : "localhost",
+        "silent": true,
+        "screenshots" : {
+          "enabled" : true,
+          "path" : "./reports",
+          "on_failure" : true,
+          "on-error" : true
+        },
+        "desiredCapabilities": {
           "browserName": "chrome"
           
+        }
+      },
+
+      "firefox" : {
+        "launch_url" : "http://www.google.com",
+        "selenium_port"  : 4446,
+        "selenium_host"  : "192.168.99.100",
+        "silent": true,
+        "screenshots" : {
+          "enabled" : true,
+          "path" : "./reports",
+          "on_failure" : true,
+          "on-error" : true
         },
-        "test_workers": {
-          "enabled": true,
-          "workers": "auto"
-        } 
+        "desiredCapabilities": {
+          "browserName": "firefox",
+           "marionette" : true 
+        }
       },
   
       "chrome" : {
@@ -53,3 +81,4 @@
       }
     }
   }
+}
