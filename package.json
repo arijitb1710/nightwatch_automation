@@ -1,83 +1,18 @@
 {
-    "src_folders" : ["tests"],
-    "output_folder" : "reports",
-    "custom_commands_path" : "",
-    "custom_assertions_path" : "",
-    "page_objects_path" : "./pageobjects",
-    "globals_path" : "",
-  
-    "selenium" : {
-      "start_process" : true,
-      "server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.14.0.jar",
-      "log_path" : "",
-      "port" : 4444,
-      "cli_args" : {
-        "webdriver.chrome.driver" : "./node_modules/chromedriver/lib/chromedriver/chromedriver.exe",
-        "webdriver.gecko.driver" : "",
-        "webdriver.edge.driver" : ""
-      }
-    },
-  
-    "test_settings" : {
-      "docker" : {
-        "launch_url" : "http://www.google.com",
-        "selenium_port"  : 4446,
-        "selenium_host"  : "192.168.99.100",
-        "silent": true,
-        "screenshots" : {
-          "enabled" : true,
-          "path" : "./reports",
-          "on_failure" : true,
-          "on-error" : true
-        },
-        "desiredCapabilities": {
-          "browserName": "firefox"
-        },
-
-      "default" : {
-        "launch_url" : "http://www.google.com",
-        "selenium_port"  : 4444,
-        "selenium_host"  : "localhost",
-        "silent": true,
-        "screenshots" : {
-          "enabled" : true,
-          "path" : "./reports",
-          "on_failure" : true,
-          "on-error" : true
-        },
-        "desiredCapabilities": {
-          "browserName": "chrome"
-          
-        }
-      },
-
-      "firefox" : {
-        "launch_url" : "http://www.google.com",
-        "selenium_port"  : 4446,
-        "selenium_host"  : "192.168.99.100",
-        "silent": true,
-        "screenshots" : {
-          "enabled" : true,
-          "path" : "./reports",
-          "on_failure" : true,
-          "on-error" : true
-        },
-        "desiredCapabilities": {
-          "browserName": "firefox"
-        }
-      },
-  
-      "chrome" : {
-        "desiredCapabilities": {
-          "browserName": "chrome"
-        }
-      },
-  
-      "edge" : {
-        "desiredCapabilities": {
-          "browserName": "MicrosoftEdge"
-        }
-      }
-    }
+  "name": "nightwatch_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arijit",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^2.42.0",
+    "nightwatch": "^0.9.21",
+    "selenium-server-standalone-jar": "^3.14.0",
+    "selenium-standalone": "^6.15.3",
+    "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }
