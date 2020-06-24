@@ -19,7 +19,22 @@
     },
   
     "test_settings" : {
-      "docker" : {
+      "default" : {
+        "launch_url" : "http://www.google.com",
+        "selenium_port"  : 4444,
+        "selenium_host"  : "localhost",
+        "silent": true,
+        "screenshots" : {
+          "enabled" : true,
+          "path" : "./reports",
+          "on_failure" : true,
+          "on-error" : true
+        },
+        "desiredCapabilities": {
+          "browserName": "chrome"
+        },
+          
+        "docker" : {
         "launch_url" : "http://www.google.com",
         "selenium_port"  : 4446,
         "selenium_host"  : "192.168.99.100",
@@ -34,7 +49,7 @@
           "browserName": "firefox"
         },
 
-      "default" : {
+      "local_chrome" : {
         "launch_url" : "http://www.google.com",
         "selenium_port"  : 4444,
         "selenium_host"  : "localhost",
